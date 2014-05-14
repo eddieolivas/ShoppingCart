@@ -7,23 +7,6 @@ $(document).ready(function(){
 	$(".food").on("click",function(event) {
 			var target = $(event.target);
 			var checkbox = $(this).find("input[type='checkbox']");
-    		if (target.is('input:checkbox') && !checkbox.prop("checked")) {
-    			checkbox.prop("checked", true);
-    		}
-    		else if (target.is('input:checkbox') && checkbox.prop("checked")){
-    			checkbox.prop("checked",false);
-    		}
-			
-			if( !checkbox.prop("checked") ){
-	        	checkbox.prop("checked",true);
-		    } 
-		    else if(checkbox.prop("checked")) {
-		    	checkbox.prop("checked", false);
-		    }
-		    else {
-		        checkbox.prop("checked",false);
-		    }
-		    
     		$(this).toggleClass("strike");
 	})
 	
